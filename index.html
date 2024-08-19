@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Personalized Interhsip Search</title> <!-- the content here will only show in the tab and in the metadata about the page -->
+  <link href="reset.css" rel="stylesheet" type="text/css" /> 
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="reset-webview.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!-- Part 1: Navbar -->
+
+  <div class="navbar">
+    <ul>
+      <!-- li id="logo"><a href="#">logo</a></li> -->
+      <div class="color-changing-buttons">
+        <li><a href="#data">Data</a></li>
+        <li><a href="#for-work-seekers">For Work Seekers</a></li>
+        <li><a href="#for-employers">For Employers</a></li>
+        
+        <li id="login"><a href="#">Log in/Sign up</a></li>
+        <li ><button id="theme-button">Toggle Light Mode</button></li>
+
+      </div>
+      <!-- Stretch Challenge: Drop Down -->
+    </ul>
+  </div>
+  
+  <!--- Headings --->
+  <div class="header-container">
+    <div class="header-item">Your internship is not just a stepping stone, it's the foundation of your future success.
+    </div>
+    <img src="./images/headingOption1.jpg" class="header-item"/>
+
+    <!-- "Every moment, every lesson: an investment in your future self." OPTION 2--> 
+  </div>
+    
+  
+  <!--- About --->
+  <div class="about active revealable">
+    <h2>Internships should be tailored opportunities for you</h2>
+    <div id="about-description">
+      <p>Internships are invaluable opportunities to help you break into an industry. They offer substantial work experience, opportunities to network, and the potential for a return offer. However, securing internships often poses challenges, as individuals may feel constrained by various factors, lack interest, or perceive the process as daunting.
+      </p>
+      
+      <p>With (brandname), our mission is to streamline the internship search process for you. Through the use of AI, we deliver a personalized experience tailored to your unique interests and constraints. Having access to a list of internships personalized to you will boost motivation, provide the support needed to overcome any barriers hindering your application efforts.
+      </p>
+    </div>
+  </div>
+  
+    <!--- Data --->
+  <div class="data active revealable" id="data">
+    
+    <div id="graph-data">
+      <h2>Reasons why people do not apply to internships</h2>
+      <img src="./images/figure1.png" width="300px"/>
+    </div>
+    
+    <div id="bulletpoint-data">
+      <h2>Benefits of internships (according to <a href=https://www.theforage.com/blog/basics/internship-statistics>NACE</a>):
+      </h2>
+      <ul>
+        <li> Paid interns get an average of 1.61 job offers after graduation, while non-interns get an average of 0.77.
+        </li>
+        <li> 68% of interns get a full-time offer from the company they interned for.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+  <!-- Impact -->
+  <div class="impact active revealable">
+
+    <!-- <h1>Impact!</h1> -->
+    <div class="internship-seekers-container">
+      <div class="internship-seekers-item">
+        <img src="./images/employee.jpg" id="internship-seeker-image" width="250px" />
+      </div>
+      <div class="internship-seekers-item" id="for-work-seekers">
+        <h2>For internship seekers:</h2>
+        <ul>
+          <li> Discover internships that offer maximum benefits while enjoying your experience.
+          </li>
+          <li> Increase your chances of getting a job offer in the future
+          </li>
+        </ul>
+        <button>Discover our internship search tool</button>
+      </div>
+    </div>
+    
+    <div class="employers-container" id="for-employers">
+      <div class="employers-item">
+        <h2>For Employers:</h2>
+        <ul>
+          <li> Find candidates that will be a good fit for your company 
+          </li>
+          <li> discover qualfied candidates that are eager to learn
+          </li>
+        </ul>
+        <button>Interested in putting up a listing on our site?</button>
+      </div>
+      <div class="employers-item">
+        <img src="./images/employer.png" id="employers-picture" width="250px" />
+      </div>
+    </div>
+  </div>    
+
+  <div class="petition active revealable" id="petition">
+
+      <h2>Sign Our Petition 📢</h2>
+      <div class="petition-container">
+
+        <div class="petition-para">
+          <p>When you perform work, it is important to recieve proper compensation. According to the Harvard Business Review, 43% of of internship positions at for-profit companies are unpaid. This creates a barrier of entry for many people, especially those from low income. Without adequate pay, interns may feel too burdened by financial responsibilities to take full advantage of the internship opportunity. Therefore, we must take a stand and demand for fair compensation for internships. It's essential to recognize the value of interns' contributions and ensure they're not taken advantage of. By signing this petition, you can contribute towards ensuring proper compensation for interns.</p>
+        </div>
+
+        <div class="signatures">
+          <p>🖊️ Edwin from Yonkers supports this.</p>
+          <p>🖊️ Ethan from Queens supports this.</p>
+          <p>🖊️ Anders from Harlem supports this.</p>
+        </div>
+
+      </div>
+
+    <!--- Sign Petition Form --->
+    
+    <form id="sign-petition" title="sign-petition">
+      <!-- inputs go here -->
+      <label for="name">Name:</label>
+      <input type="text" id="name">
+      <label for="hometown">Hometown:</label>
+      <input type="text" id="hometown">
+      <label for="email">Email:</label>
+      <input type="text" id="email">
+    </form>
+
+     <!--- Sign Now Button --->
+    <button id="sign-now-button">Sign Now</button>
+  </div>
+
+
+  
+  <!-- Modal -->
+  <div id="thanks-modal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div id="modal-text-container">
+        <!-- text here -->
+        <p id="thanks-modal-content">THANK YOU!</p>
+        <!-- button here (stretch feature) -->
+      </div>
+      <!-- image here-->
+      <img src="./images/celebrate.webp" width="500px" id="modal-image"/>
+      
+    </div>
+
+  </div>
+  
+
+  <script src="index.js"></script>
+</body>
+
+</html>
